@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/minimum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="55dp"
+        android:padding="5dp"
+        android:text="Minimum"
+        android:textSize="20sp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:padding="5dp"
+        android:id="@+id/minnumber"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_margin="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/minimum"
+        app:layout_constraintStart_toStartOf="@+id/minimum"
+        app:layout_constraintTop_toBottomOf="@+id/minimum" />
+
+    <TextView
+        android:id="@+id/maximum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="55dp"
+        android:padding="5dp"
+        android:text="Maximum"
+        android:layout_marginTop="15dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:padding="5dp"
+        android:id="@+id/maxnumber"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/maximum"
+        app:layout_constraintStart_toStartOf="@+id/maximum"
+        app:layout_constraintTop_toBottomOf="@+id/maximum" />
+
+    <TextView
+        android:id="@+id/num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:padding="5dp"
+        android:text="Number of numbers:"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/minimum"
+        app:layout_constraintStart_toStartOf="@+id/minimum"
+        app:layout_constraintTop_toBottomOf="@+id/minnumber" />
+
+    <EditText
+        android:id="@+id/total"
+        android:padding="5dp"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/minimum"
+        app:layout_constraintStart_toStartOf="@+id/minimum"
+        app:layout_constraintTop_toBottomOf="@+id/num" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Duplicate values"
+        android:layout_marginTop="15dp"
+        android:padding="5dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/maximum"
+        app:layout_constraintStart_toStartOf="@+id/maximum"
+        app:layout_constraintTop_toBottomOf="@+id/maxnumber" />
+
+    <Button
+        android:id="@+id/generate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Generate"
+        android:padding="5dp"
+        android:textSize="20sp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/maximum"
+        app:layout_constraintStart_toStartOf="@+id/maximum"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/generate">
+
+        <TextView
+            android:id="@+id/result"
+            android:textSize="25sp"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
